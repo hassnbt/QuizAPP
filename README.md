@@ -17,7 +17,7 @@ An interactive **Quiz App** built with Android Studio that lets users answer que
 ![Home Screen](assets/home.jpg)
 
 ### **📝 Quiz Screen**
-![Quiz Screen](assets/quiz.jpg)
+![Quiz Screen](assets/quiz1.jpg)
 
 ### **📤 Share Feature**
 ![Share Score](assets/score.jpg)
