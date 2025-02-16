@@ -2,7 +2,6 @@
 
 An interactive **Quiz App** built with Android Studio that lets users answer questions, track scores, and share results.
 
-![Quiz App Screenshot](assets/quiz_app_screenshot.png)
 
 ## 🎯 Features
 - ✅ Multiple-choice questions with a radio button interface.
@@ -18,10 +17,10 @@ An interactive **Quiz App** built with Android Studio that lets users answer que
 ![Home Screen](assets/home.jpg)
 
 ### **📝 Quiz Screen**
-![Quiz Screen](assets/quiz_screen.png)
+![Quiz Screen](assets/quiz.jpg)
 
 ### **📤 Share Feature**
-![Share Score](assets/share_feature.png)
+![Share Score](assets/scpre.jpg)
 
 ---
 ## 🚀 Installation
