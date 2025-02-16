@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">QuizAPP</string>
+    <string name="app_logo">App Logo</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="enter_your_name">Enter Your name</string>
+    <string name="submit">Submit</string>
+    <string name="nan">Nan</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_4">Option 4</string>
+    <string name="enter">Enter</string>
+    <string name="finish">Finish</string>
+    <string name="previous"><![CDATA[< Previous]]></string>
+
 </resources>

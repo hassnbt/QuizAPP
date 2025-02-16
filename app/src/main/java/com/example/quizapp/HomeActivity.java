@@ -3,8 +3,11 @@ package com.example.quizapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,51 +17,52 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
-
-    ImageView ivLogo;
-    CardView cvcard;
-    Animation slidedown;
-    Animation move;
+    Animation slide;
+    Animation rotate;
+    ImageView logo;
+    CardView card;
+    EditText etName;
+    Button btsubmit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
 init();
 
-ivLogo.startAnimation(slidedown);
-cvcard.startAnimation(move);
+card.startAnimation(slide);
+logo.startAnimation(rotate);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+btsubmit.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+String name=etName.getText().toString();
 
-                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                startActivity(intent);
+Intent intent=new Intent(HomeActivity.this, quizactivity.class);
+intent.putExtra("Name",name);
 
-                finish();
+startActivity(intent);
 
-
-            }
-        },1750);
+finish();
     }
-
-
+});
+    }
     private void init()
     {
 
-        ivLogo=findViewById(R.id.iVLogo);
-        cvcard=findViewById(R.id.cvcard);
+card=findViewById(R.id.cvcard1);
+logo=findViewById(R.id.ivlogo1);
+etName=findViewById(R.id.etName);
+btsubmit=findViewById(R.id.btsubmit);
+slide= AnimationUtils.loadAnimation(this,R.anim.animation_card1);
+rotate=AnimationUtils.loadAnimation(this,R.anim.animation_logo1);
 
-slidedown= AnimationUtils.loadAnimation(this,R.anim.animation_logo);
-move=AnimationUtils.loadAnimation(this,R.anim.animation_card);
     }
 }
