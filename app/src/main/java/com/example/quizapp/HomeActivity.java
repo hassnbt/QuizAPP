@@ -44,13 +44,15 @@ btsubmit.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 String name=etName.getText().toString();
-
+if(name.isEmpty()){
+etName.setError("This Feild is required.");
+}else {
 Intent intent=new Intent(HomeActivity.this, quizactivity.class);
 intent.putExtra("Name",name);
 
 startActivity(intent);
 
-finish();
+finish();}
     }
 });
     }

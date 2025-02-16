@@ -84,10 +84,7 @@ tvprevious.setOnClickListener((view)->{
     }else {
         questionnumber1();
         currentQuestion--;
-        radioGroup.clearCheck();
-        if (optionsselected[currentQuestion] != 0) {
-            radioGroup.check(optionsselected[currentQuestion]);
-        }
+
 
 
         loadquestion();
@@ -108,13 +105,14 @@ if(currentQuestion!=5){
 //                } else {
 //                    btnnext.setText(R.string.enter);
 //                }
-                questionnumber();
                 currentQuestion++;
-                if (currentQuestion == questions.length - 1) {
+                questionnumber();
+
+             /*   if (currentQuestion == questions.length - 1) {
                     btnnext.setText(R.string.finish);
                 } else {
-                    btnnext.setText(R.string.enter);
-                }
+                    btnnext.setText(R.string.Next);
+                }*/
                 if(currentQuestion==5)
                 {
                   //  calltoast();
@@ -138,10 +136,10 @@ else{
    {
 
 
-       if (currentQuestion == questions.length - 1) {
+       if (currentQuestion == questions.length-1) {
            btnnext.setText(R.string.finish);
        } else {
-           btnnext.setText(R.string.enter);
+           btnnext.setText(R.string.Next);
        }
    }
     private void questionnumber1()
@@ -151,7 +149,7 @@ else{
         if (currentQuestion == questions.length ) {
             btnnext.setText(R.string.finish);
         } else {
-            btnnext.setText(R.string.enter);
+            btnnext.setText(R.string.Next);
         }
     }
    private  void calltoast(){
@@ -202,7 +200,10 @@ marks[currentQuestion]=0;
 
 }
 private void loadquestion()
-{
+{ radioGroup.clearCheck();
+    if (optionsselected[currentQuestion] != 0) {
+        radioGroup.check(optionsselected[currentQuestion]);
+    }
 
     cvquestion.setText(questions[currentQuestion]);
 option_1.setText(options[currentQuestion][0]);
