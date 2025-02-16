@@ -20,7 +20,7 @@ An interactive **Quiz App** built with Android Studio that lets users answer que
 ![Quiz Screen](assets/quiz.jpg)
 
 ### **📤 Share Feature**
-![Share Score](assets/scpre.jpg)
+![Share Score](assets/score.jpg)
 
 ---
 ## 🚀 Installation
